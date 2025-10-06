@@ -1,33 +1,128 @@
-    {
-         margin: 0;
-         padding: 0;
-         box-sizing: border-box;
-      }
 
-      body {
-         display: flex;
-         justify-content: center; 
-         align-items: center; 
-         height: 100vh; 
-         background-color: #800080; 
-         font-family: Arial, sans-serif;
-      }
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mural Colorido Roxo e Preto</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-     
-      form {
-         background-color: #fff;
-         padding: 20px;
-         border-radius: 8px;
-         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-         width: 300px;
-      }
+    body {
+      background: #0d0018;
+      margin: 0;
+      padding: 20px;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      color: #eee;
+      background-image:
+        radial-gradient(circle at top left, #8e2de2, transparent 70%),
+        radial-gradient(circle at bottom right, #4a00e0, transparent 70%);
+    }
 
-      h3 {
-         text-align: center;
-         margin-bottom: 20px;
-         color: #800080; 
-      }
+    .mural {
+      max-width: 720px;
+      width: 100%;
+      background: linear-gradient(135deg, #6e3cbf, #1c0037);
+      border-radius: 20px;
+      box-shadow:
+        0 0 15px #8a2be2,
+        0 10px 30px rgba(0, 0, 0, 0.8);
+      padding: 40px 50px;
+      position: relative;
+      overflow: hidden;
+      border: 3px solid #b291ff;
+    }
 
-      input {
-         width: 100%; 
+    .mural::before {
+      content: "";
+      position: absolute;
+      top: -40%;
+      left: -40%;
+      width: 220%;
+      height: 220%;
+      background: radial-gradient(circle at center, rgba(138, 43, 226, 0.5), transparent 70%);
+      animation: pulse 7s ease-in-out infinite;
+      z-index: 1;
+      border-radius: 50%;
+      filter: blur(60px);
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 0.5;
       }
+      50% {
+        transform: scale(1.25);
+        opacity: 0.8;
+      }
+    }
+
+    .mural > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      margin-bottom: 15px;
+      background: linear-gradient(90deg, #d9b3ff, #7f4aff, #b291ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 3px 8px rgba(95, 26, 255, 0.7);
+      letter-spacing: 2px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 25px;
+      color: #d9b3ff;
+      text-shadow: 1px 1px 4px #1a0030;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      color: #ddd;
+      text-shadow: 0 0 5px rgba(0,0,0,0.75);
+      margin-bottom: 30px;
+    }
+
+    button {
+      background: linear-gradient(90deg, #7f4aff, #b291ff);
+      border: none;
+      padding: 14px 36px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(138, 43, 226, 0.7);
+      transition: all 0.35s ease;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    button:hover {
+      background: linear-gradient(90deg, #cda7ff, #9a6fff);
+      box-shadow: 0 10px 35px rgba(138, 43, 226, 0.9);
+      transform: translateY(-3px);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="mural">
+    <h1>Mural Vibrante Roxo</h1>
+    <h2>Explorando a beleza do roxo e preto</h2>
+    <p>Este mural traz uma paleta de roxos vibrantes, texturas e efeitos para criar uma experiência visual única. O preto escuro ajuda a destacar as cores, enquanto o lilás e tons mais claros trazem harmonia e leveza.</p>
+    <button>Descubra mais</button>
+  </div>
+</body>
+</html>
