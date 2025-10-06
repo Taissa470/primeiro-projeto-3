@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>FORMULARIO</h1>
-    <div style="width: 250px; height: 250px; border: 2px solid rgb(62, 1, 1); padding: 10px; border-radius: 15px; ">
-        <form action="">
-      <input type="text" placeholder="login" id="login">
-      <input type="password" placeholder="senha" id="senha">
-      <input type="submit" onclick="logar(); return false">
-    </form>
+<body>
+   <div class="formulario">
+
+  <form>
+   <h3>Formulario</h3>
+   <input type="text" placeholder="login" id="login">
+   <input type="password" placeholder="senha" id="senha">
+    <input type="telephone" placeholder="telefone" id="telefone">
+    <input type="email" placeholder="email" id="email">
+    <input type="submit" onclick="logar">
+   </form>
+   </div>
 </body>
 </html>
