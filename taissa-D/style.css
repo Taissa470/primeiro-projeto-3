@@ -1,128 +1,95 @@
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mural Colorido Roxo e Preto</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      background: #0d0018;
-      margin: 0;
-      padding: 20px;
-      font-family: 'Poppins', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      min-height: 100vh;
-      color: #eee;
-      background-image:
-        radial-gradient(circle at top left, #8e2de2, transparent 70%),
-        radial-gradient(circle at bottom right, #4a00e0, transparent 70%);
-    }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #4B0082; 
+  color: #D8B1FF; 
+  padding: 20px;
+}
 
-    .mural {
-      max-width: 720px;
-      width: 100%;
-      background: linear-gradient(135deg, #6e3cbf, #1c0037);
-      border-radius: 20px;
-      box-shadow:
-        0 0 15px #8a2be2,
-        0 10px 30px rgba(0, 0, 0, 0.8);
-      padding: 40px 50px;
-      position: relative;
-      overflow: hidden;
-      border: 3px solid #b291ff;
-    }
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
 
-    .mural::before {
-      content: "";
-      position: absolute;
-      top: -40%;
-      left: -40%;
-      width: 220%;
-      height: 220%;
-      background: radial-gradient(circle at center, rgba(138, 43, 226, 0.5), transparent 70%);
-      animation: pulse 7s ease-in-out infinite;
-      z-index: 1;
-      border-radius: 50%;
-      filter: blur(60px);
-    }
+#geral {
+  background-color: #5A2D8B;
+  width: 100%;
+  max-width: 700px;
+  padding: 20px;
+  border-radius: 8px;
+}
 
-    @keyframes pulse {
-      0%, 100% {
-        transform: scale(1);
-        opacity: 0.5;
-      }
-      50% {
-        transform: scale(1.25);
-        opacity: 0.8;
-      }
-    }
+#header {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-    .mural > * {
-      position: relative;
-      z-index: 2;
-    }
+h1 {
+  font-size: 1.8rem;
+  color: #D8B1FF;
+}
 
-    h1 {
-      font-size: 3rem;
-      font-weight: 900;
-      margin-bottom: 15px;
-      background: linear-gradient(90deg, #d9b3ff, #7f4aff, #b291ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 2px 3px 8px rgba(95, 26, 255, 0.7);
-      letter-spacing: 2px;
-    }
+#formulario_mural {
+  background-color: #6A3D99; 
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
 
-    h2 {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 25px;
-      color: #d9b3ff;
-      text-shadow: 1px 1px 4px #1a0030;
-    }
+#formulario_mural label {
+  display: block;
+  margin-bottom: 8px;
+}
 
-    p {
-      font-size: 1.2rem;
-      line-height: 1.7;
-      color: #ddd;
-      text-shadow: 0 0 5px rgba(0,0,0,0.75);
-      margin-bottom: 30px;
-    }
+#formulario_mural input, #formulario_mural textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #D8B1FF;
+  border-radius: 4px;
+  background-color: #5A2D8B;
+  color: #D8B1FF;
+  font-size: 1rem;
+}
 
-    button {
-      background: linear-gradient(90deg, #7f4aff, #b291ff);
-      border: none;
-      padding: 14px 36px;
-      color: #fff;
-      font-weight: 700;
-      font-size: 1.1rem;
-      border-radius: 12px;
-      cursor: pointer;
-      box-shadow: 0 6px 20px rgba(138, 43, 226, 0.7);
-      transition: all 0.35s ease;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
+#formulario_mural input[type="submit"] {
+  background-color: #D8B1FF;
+  color: #4B0082;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
-    button:hover {
-      background: linear-gradient(90deg, #cda7ff, #9a6fff);
-      box-shadow: 0 10px 35px rgba(138, 43, 226, 0.9);
-      transform: translateY(-3px);
-    }
+#formulario_mural input[type="submit"]:hover {
+  background-color: #D1A1E5;
+}
 
-  </style>
-</head>
-<body>
-  <div class="mural">
-    <h1>Mural Vibrante Roxo</h1>
-    <h2>Explorando a beleza do roxo e preto</h2>
-    <p>Este mural traz uma paleta de roxos vibrantes, texturas e efeitos para criar uma experiência visual única. O preto escuro ajuda a destacar as cores, enquanto o lilás e tons mais claros trazem harmonia e leveza.</p>
-    <button>Descubra mais</button>
-  </div>
-</body>
-</html>
+.taissa_tabela {
+  background-color: #6A3D99;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.taissa_tabela li {
+  margin-bottom: 10px;
+}
+
+.taissa_tabela li strong {
+  color: #D8B1FF;
+}
+
+#footer {
+  text-align: center;
+  color: #D8B1FF;
+}
